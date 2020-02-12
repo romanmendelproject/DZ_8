@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+ <section class="main-container">
+     <div class="header">
+        <div class="header_title-main">
+            <a href=""><span>SPORT</span> BLOG</a>
+        </div>
+        <div class="header_keep">keep fit always</div>
+        <div class="header_title-img">
+            <img src="{{ url_for('static', filename='images/lifter.png') }}" alt="" >
+        </div>
+     </div>
+     <div class="menu">
+         <ul>
+            <li><a href="/">Home</a></li> 
+            <li><a href="{{ url_for('posts_app.posts') }}">Posts</a></li>          
+            <li><a href="#">Services</a></li>         
+            <li><a href="#">Contacts</a></li>           
+         </ul>
+     </div>
+     <div class="body-container">
+        <div class="post-container">
+
+            {% for post in posts %}
+
+            <div class="posts-section">
+                <div class="posts-section_title">
+                    <a href="{{ url_for('posts_app.post', id=post.id) }}">{{ post.title }}</a>
+                </div> 
+                <div class="posts-section_info">
+                    <b>Date</b>: {{ post.created_date}} | <b>Author:</b> {{ post.user.username }}
+                </div>
+                <div class="posts-section_img">
+                    <img src="/static/images/{{ post.img }}" alt="" >
+                    
+                </div>
+                <div class="posts-section_text">
+                    {{ post.text }}
+                </div>
+                <div class="posts-section_footer">
+                    <div class="posts-section_footer__tags">
+                    <b>Теги:</b> 
+                    {% for tags in post.tags %}
+                        <a href="{{ url_for('posts_app.tag', tag=tags.id) }}">{{ tags.name }} </a>
+                    {% endfor %}
+                    </div>
+                        <a href="{{ url_for('posts_app.post', id=post.id) }}" class="posts-section_footer__button">Читать далее</a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+        <div class="tags-section">
+            <div class="tags-section_wraper">
+                <div class="tags-section_wraper_category">
+                <b>Категории</b>
+                <ul>
+                    {% for tag_item in tag %}
+                        <li><a href="{{ url_for('posts_app.tag', tag=tag_item.id) }}">{{ tag_item.name }} </a></li>
+                    {% endfor %}
+                </ul>
+
+                </div>
+                <div class="tags-section_wraper_archives">
+                    <b>Архивы</b>
+                    <ul>
+                        <li><a href="">Январь 2020</a></li>
+                        <li><a href="">Февераль 2020</a></li>
+                        <li><a href="">Март 2020</a></li>
+                        <li><a href="">Апрель 2020</a></li>
+                        <li><a href="">Май 2020</a></li>
+                        <li><a href="">Июнь 2020</a></li>
+                        <li><a href="">Июль 2020</a></li>
+                        <li><a href="">Август 2020</a></li>
+                        <li><a href="">Сентябрь 2020</a></li>
+                        <li><a href="">Октябрь 2020</a></li>
+                        <li><a href="">Ноябрь 2020</a></li>
+                        <li><a href="">Декабрь 2020</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="footer">
+        Copyright © 2020 Otus Web Blog Example
+     </div>
+ </section>
+</body>
+</html>

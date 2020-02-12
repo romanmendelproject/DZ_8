@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC|Work+Sans:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap");
+.main-container {
+  background-color: #f1f1ee; }
+
+.header {
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #9ec3d4;
+  position: relative;
+  text-align: right;
+  background-image: linear-gradient(to right, red, yellow); }
+  .header_title-main {
+    width: 300px; }
+    .header_title-main a {
+      font: 22pt bold sans-serif;
+      font-family: 'Work Sans', sans-serif;
+      text-decoration: none; }
+      .header_title-main a span {
+        font: 28pt solid sans-serif;
+        color: #ffeb3b;
+        font-family: 'Bowlby One SC', cursive;
+        margin-bottom: 5px;
+        display: inline-block; }
+  .header_keep {
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 18px;
+    font-family: 'Sigmar One', cursive;
+    opacity: 0.8; }
+  .header_title-img {
+    width: 150px;
+    opacity: 0.5; }
+    .header_title-img img {
+      width: 70%; }
+
+.menu {
+  height: 35px;
+  background-color: #dace68;
+  border-top: groove 1px;
+  width: 100%; }
+  .menu ul {
+    display: flex;
+    padding: 0;
+    justify-content: left;
+    margin: 0;
+    height: 100%;
+    padding: 0 10%; }
+    .menu ul li {
+      list-style-type: none;
+      padding-bottom: 10px;
+      font-size: 18px;
+      width: 100px;
+      height: 100%;
+      padding: 0 20px;
+      text-align: center; }
+      .menu ul li:hover {
+        background-color: #83682d;
+        transition: 0.3s; }
+      .menu ul li a {
+        display: block;
+        text-decoration: none;
+        color: #5c3502;
+        vertical-align: middle;
+        line-height: 38px; }
+
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10%;
+  margin-top: 20px; }
+  .body-container .mainpost span {
+    display: block;
+    font-family: 'Sigmar One', cursive;
+    font-size: 20px; }
+  .body-container .mainpost img {
+    width: 50%;
+    float: left;
+    margin: 7px 7px 7px 0; }
+  .body-container .onepost-container {
+    max-width: 580px; }
+  .body-container .post-container {
+    width: 50%;
+    min-width: 235px; }
+  .body-container .oneposts-section {
+    border-style: inset;
+    border-width: 1px;
+    width: 100%;
+    border-color: rgba(204, 175, 124, 0.171);
+    background-color: #e8e9e1;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    font-size: 15px;
+    line-height: 19px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column; }
+    .body-container .oneposts-section_title {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+      margin-bottom: 5px; }
+    .body-container .oneposts-section_info {
+      padding-bottom: 10px;
+      font-size: 12px; }
+    .body-container .oneposts-section_img {
+      margin: 0 auto;
+      width: 100%; }
+      .body-container .oneposts-section_img img {
+        padding: 5px;
+        border: 1px solid #dddddd;
+        background: #eeeeee;
+        width: 70%; }
+    .body-container .oneposts-section_text {
+      margin-top: 5px;
+      overflow: hidden;
+      font-size: 14px;
+      max-height: 10%;
+      overflow: visible;
+      max-height: 100%; }
+    .body-container .oneposts-section_footer {
+      text-align: left;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      height: 14%;
+      padding: 10px 0; }
+      .body-container .oneposts-section_footer__tags a {
+        color: saddlebrown;
+        text-decoration: none; }
+        .body-container .oneposts-section_footer__tags a:hover {
+          color: #cec2a8;
+          transition: 0.1s; }
+      .body-container .oneposts-section_footer__button {
+        background-color: #dace68;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px 45px; }
+        .body-container .oneposts-section_footer__button:hover {
+          background-color: #aa8f56;
+          transition: 0.3s; }
+  .body-container .posts-section {
+    border-style: inset;
+    border-width: 1px;
+    width: 100%;
+    border-color: rgba(204, 175, 124, 0.171);
+    background-color: #e8e9e1;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    font-size: 15px;
+    line-height: 19px;
+    padding: 5px; }
+    .body-container .posts-section_title {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+      margin-bottom: 5px; }
+    .body-container .posts-section_info {
+      padding-bottom: 10px;
+      font-size: 12px; }
+    .body-container .posts-section_img {
+      margin: 0 auto;
+      width: 100%; }
+      .body-container .posts-section_img img {
+        padding: 5px;
+        border: 1px solid #dddddd;
+        background: #eeeeee;
+        width: 70%; }
+    .body-container .posts-section_text {
+      margin-top: 5px;
+      overflow: hidden;
+      font-size: 14px;
+      max-height: 10%; }
+    .body-container .posts-section_footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 10px; }
+      .body-container .posts-section_footer__tags a {
+        color: saddlebrown;
+        text-decoration: none; }
+        .body-container .posts-section_footer__tags a:hover {
+          color: #cec2a8;
+          transition: 0.1s; }
+      .body-container .posts-section_footer__button {
+        background-color: #dace68;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer; }
+        .body-container .posts-section_footer__button:hover {
+          background-color: #aa8f56;
+          transition: 0.3s; }
+  .body-container .tags-section {
+    border-right-color: #fcfafa;
+    border-right-style: ridge;
+    border-right-width: 2px;
+    border-left-color: #fcfafa;
+    border-left-style: ridge;
+    border-left-width: 2px;
+    width: 15%;
+    margin-left: 30px;
+    margin-top: -20px;
+    background-color: #e4e1d6;
+    min-width: 100px;
+    max-width: 200px;
+    text-align: center; }
+    .body-container .tags-section .tags-section_wraper {
+      position: sticky;
+      top: 0; }
+      .body-container .tags-section .tags-section_wraper_category {
+        margin-top: 15px; }
+        .body-container .tags-section .tags-section_wraper_category ul {
+          list-style-type: none;
+          padding: 0; }
+          .body-container .tags-section .tags-section_wraper_category ul li {
+            display: block;
+            padding: 5px 0 3px 0;
+            text-decoration: none;
+            border-bottom: 1px solid #d6d6d6; }
+            .body-container .tags-section .tags-section_wraper_category ul li a {
+              color: saddlebrown;
+              text-decoration: none; }
+              .body-container .tags-section .tags-section_wraper_category ul li a:hover {
+                color: #cec2a8;
+                transition: 0.1s; }
+      .body-container .tags-section .tags-section_wraper_archives ul {
+        list-style-type: none;
+        padding: 0; }
+        .body-container .tags-section .tags-section_wraper_archives ul li {
+          display: block;
+          padding: 5px 0 3px 0;
+          text-decoration: none;
+          border-bottom: 1px solid #d6d6d6; }
+          .body-container .tags-section .tags-section_wraper_archives ul li a {
+            color: saddlebrown;
+            text-decoration: none; }
+            .body-container .tags-section .tags-section_wraper_archives ul li a:hover {
+              color: #cec2a8;
+              transition: 0.1s; }
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #b3a671;
+  color: white;
+  text-align: center;
+  height: 60px;
+  line-height: 4em;
+  border-top: 5px solid #b4995d;
+  margin-top: 1px; }
