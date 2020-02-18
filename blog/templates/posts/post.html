@@ -1,32 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
- <section class="main-container">
-     <div class="header">
-        <div class="header_title-main">
-            <a href=""><span>SPORT</span> BLOG</a>
-        </div>
-        <div class="header_keep">keep fit always</div>
-        <div class="header_title-img">
-            <img src="{{ url_for('static', filename='images/lifter.png') }}" alt="" >
-        </div>
-     </div>
-     <div class="menu">
-         <ul>
-            <li><a href="/">Home</a></li> 
-            <li><a href="{{ url_for('posts_app.posts') }}">Posts</a></li>        
-            <li><a href="#">Services</a></li>         
-            <li><a href="#">Contacts</a></li>           
-         </ul>
-     </div>
-     <div class="body-container">
+{% extends "base.html" %}
+
+{% block title %}Post{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="body-container">
         <div class="onepost-container">
             <div class="oneposts-section">
                 <div class="oneposts-section_title">
@@ -43,19 +23,16 @@
                 </div>
                 <div class="oneposts-section_footer">
                     <div class="oneposts-section_footer__tags">
-                    <b>Теги:</b> 
-                    {% for tags in post.tags %}
-                        <a href="{{ url_for('posts_app.tag', tag=tags.id) }}">{{ tags.name }} </a>
-                    {% endfor %}
+                        <b>Теги:</b> 
+                        {% for tags in post.tags %}
+                            <a href="{{ url_for('posts_app.tag', tag=tags.id) }}">{{ tags.name }} </a>
+                        {% endfor %}
                     </div>
-                        <a href="{{ url_for('posts_app.posts') }}" class="oneposts-section_footer__button">Назад</a>
+                    <a href="{{ url_for('posts_app.posts') }}" class="oneposts-section_footer__button">Назад</a>
                 </div>
             </div>
-             </div>
-     
- </section>
- <div class="footer">
-    Copyright © 2020 Otus Web Blog Example
- </div>
-</body>
-</html>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %} {{ super() }} {% endblock %}

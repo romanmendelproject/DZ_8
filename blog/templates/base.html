@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{% block title %}{% endblock %} - My blog</title>
+    <div class="header">
+        <div class="header_title-main">
+            <a href=""><span>SPORT</span> BLOG</a>
+        </div>
+        <div class="header_keep">keep fit always</div>
+        <div class="header_title-img">
+            <img src="{{ url_for('static', filename='images/lifter.png') }}" alt="Логотип" >
+        </div>
+     </div>
+     <div class="menu">
+         <ul>
+            <li><a href="/">Home</a></li> 
+            <li><a href="{{ url_for('posts_app.posts') }}">Posts</a></li>          
+            <li><a href="#">Services</a></li>         
+            <li><a href="#">Contacts</a></li>           
+         </ul>
+     </div>
+    {% endblock %}
+</head>
+<body>
+    <section class="main-container">
+        {% block content %}{% endblock %}
+    </section>
+            {% block footer %}
+                <div class="footer">
+                    Copyright © 2020 Otus Web Blog Example
+                </div>
+            {% endblock %}
+</body>
+
+</html>

@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
- <section class="main-container">
-     <div class="header">
-        <div class="header_title-main">
-            <a href=""><span>SPORT</span> BLOG</a>
-        </div>
-        <div class="header_keep">keep fit always</div>
-        <div class="header_title-img">
-            <img src="{{ url_for('static', filename='images/lifter.png') }}" alt="" >
-        </div>
-     </div>
-     <div class="menu">
-         <ul>
-            <li><a href="/">Home</a></li> 
-            <li><a href="{{ url_for('posts_app.posts') }}">Posts</a></li>          
-            <li><a href="#">Services</a></li>         
-            <li><a href="#">Contacts</a></li>           
-         </ul>
-     </div>
+{% extends "base.html" %}
+
+{% block title %}Posts{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
      <div class="body-container">
         <div class="post-container">
 
@@ -90,9 +70,6 @@
             </div>
         </div>
      </div>
-     <div class="footer">
-        Copyright © 2020 Otus Web Blog Example
-     </div>
- </section>
-</body>
-</html>
+{% endblock %}
+
+{% block footer %} {{ super() }} {% endblock %}
